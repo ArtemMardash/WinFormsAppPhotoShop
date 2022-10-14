@@ -10,7 +10,9 @@ namespace WinFormsAppPhotoShop
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Convert from Pixel to Bitmap
+        /// </summary>
         public static void FromPixelToBitmap()
         {
             for(int i = 0; i < Image.Height; i ++)
@@ -21,18 +23,28 @@ namespace WinFormsAppPhotoShop
                 }
             }
         }
-
-        public static void FromOnePixelToDitmap(int x, int y, UInt32 matrixPixel)
+        /// <summary>
+        /// Convert from one pixel with coordination to Bitmap
+        /// </summary>
+        /// <param name="x">coord1</param>
+        /// <param name="y">coord2</param>
+        /// <param name="matrixPixel">Matrix</param>
+        public static void FromOnePixelToBitmap(int x, int y, UInt32 matrixPixel)
         {
             Image.SetPixel(y, x, Color.FromArgb((int) matrixPixel));
         }
-
+        /// <summary>
+        /// Convert from Bitmap to Screen
+        /// </summary>
         public void FromBitmapToScreen()
         {
             pictureBox1.Image = Image;
         }
-
-
+        /// <summary>
+        /// save picture
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog sfd = new SaveFileDialog();
@@ -49,7 +61,11 @@ namespace WinFormsAppPhotoShop
                 bpm.Save(sfd.FileName, ImageFormat.Jpeg);
             }
         }
-
+        /// <summary>
+        /// Open picture for edit
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void openFileToolStripMenuItem_Click(object sender, EventArgs e)
         { 
             OpenFileDialog ofd = new OpenFileDialog();
@@ -78,37 +94,35 @@ namespace WinFormsAppPhotoShop
                 }
             }
         }
-
+        /// <summary>
+        /// Open Form brigtness
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void brightnesscontrastToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form2 brigtnessForm = new Form2(this);
             brigtnessForm.ShowDialog();
         }
-
+        /// <summary>
+        /// Open Form BlurAndSharpness
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void balanceOfColourToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form3 ColorBalanceForm = new Form3(this);
             ColorBalanceForm.ShowDialog();
         }
-
+        /// <summary>
+        /// Open Form "BlurAndSharpness"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void raiseSharpnessToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(ImageName != "\0")
-            {
-                matrixPixel = Filter.matrix_filtration(Image.Width, Image.Height, matrixPixel, Filter.N1, Filter.sharpness);
-                FromPixelToBitmap();
-                FromBitmapToScreen();
-            }
-        }
-
-        private void blurToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (ImageName != "\0")
-            {
-                matrixPixel = Filter.matrix_filtration(Image.Width, Image.Height, matrixPixel, Filter.N2, Filter.blur);
-                FromPixelToBitmap();
-                FromBitmapToScreen();
-            }
+            blurAndSharpness blurAndSharpness = new blurAndSharpness(this);
+            blurAndSharpness.ShowDialog();
         }
     }
 }

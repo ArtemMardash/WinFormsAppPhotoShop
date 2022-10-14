@@ -58,7 +58,8 @@
             // 
             // trackBar1
             // 
-            this.trackBar1.Location = new System.Drawing.Point(89, 79);
+            this.trackBar1.Location = new System.Drawing.Point(105, 79);
+            this.trackBar1.Minimum = -10;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(338, 69);
             this.trackBar1.TabIndex = 2;
@@ -66,24 +67,26 @@
             // 
             // trackBar2
             // 
-            this.trackBar2.Location = new System.Drawing.Point(89, 323);
+            this.trackBar2.Location = new System.Drawing.Point(105, 323);
+            this.trackBar2.Minimum = -10;
             this.trackBar2.Name = "trackBar2";
             this.trackBar2.Size = new System.Drawing.Size(338, 69);
             this.trackBar2.TabIndex = 3;
+            this.trackBar2.Scroll += new System.EventHandler(this.trackBar2_Scroll);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(238, 154);
+            this.button1.Location = new System.Drawing.Point(220, 154);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 34);
             this.button1.TabIndex = 4;
             this.button1.Text = "apply";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(238, 398);
+            this.button2.Location = new System.Drawing.Point(220, 398);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(112, 34);
             this.button2.TabIndex = 5;

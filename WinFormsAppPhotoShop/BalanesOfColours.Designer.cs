@@ -101,24 +101,30 @@
             // 
             // trackBar1
             // 
-            this.trackBar1.Location = new System.Drawing.Point(205, 38);
+            this.trackBar1.Location = new System.Drawing.Point(140, 38);
+            this.trackBar1.Minimum = -10;
             this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(156, 69);
+            this.trackBar1.Size = new System.Drawing.Size(281, 69);
             this.trackBar1.TabIndex = 6;
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             // 
             // trackBar2
             // 
-            this.trackBar2.Location = new System.Drawing.Point(205, 169);
+            this.trackBar2.Location = new System.Drawing.Point(140, 169);
+            this.trackBar2.Minimum = -10;
             this.trackBar2.Name = "trackBar2";
-            this.trackBar2.Size = new System.Drawing.Size(156, 69);
+            this.trackBar2.Size = new System.Drawing.Size(281, 69);
             this.trackBar2.TabIndex = 7;
+            this.trackBar2.Scroll += new System.EventHandler(this.trackBar2_Scroll);
             // 
             // trackBar3
             // 
-            this.trackBar3.Location = new System.Drawing.Point(205, 294);
+            this.trackBar3.Location = new System.Drawing.Point(140, 294);
+            this.trackBar3.Minimum = -10;
             this.trackBar3.Name = "trackBar3";
-            this.trackBar3.Size = new System.Drawing.Size(156, 69);
+            this.trackBar3.Size = new System.Drawing.Size(281, 69);
             this.trackBar3.TabIndex = 8;
+            this.trackBar3.Scroll += new System.EventHandler(this.trackBar3_Scroll);
             // 
             // button1
             // 
@@ -128,7 +134,7 @@
             this.button1.TabIndex = 9;
             this.button1.Text = "apply";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button_Click);
             // 
             // button2
             // 

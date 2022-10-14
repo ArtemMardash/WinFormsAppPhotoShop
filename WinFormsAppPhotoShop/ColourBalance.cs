@@ -26,7 +26,7 @@ namespace WinFormsAppPhotoShop
             return point;
         }
 
-        public static UInt32 ColorBalance_B(UInt32 point, int poz, int length)
+        public static UInt32 ColorBalance_G(UInt32 point, int poz, int length)
         {
             int r, g, b;
 
@@ -44,7 +44,7 @@ namespace WinFormsAppPhotoShop
             return point;
         }
 
-        public static UInt32 ColorBalance_b(UInt32 point, int poz, int length)
+        public static UInt32 ColorBalance_B(UInt32 point, int poz, int length)
         {
             int r, g, b;
 

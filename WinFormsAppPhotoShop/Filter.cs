@@ -15,14 +15,16 @@ namespace WinFormsAppPhotoShop
     internal class Filter
     {
         public const int N1 = 3;
-        public static double[,] sharpness = new double[N1, N1] { { -2, -2, -2},
-                                                                { -2, 17, -2},
-                                                                { -2, -2, -2 }};
+        static double m1;
+        public static double[,] sharpness = new double[N1, N1] { { m1, m1, m1},
+                                                                { m1, Math.Abs(m1*8) + 1, m1},
+                                                                { m1, m1, m1 }};
 
         public const int N2 = 3;
-        public static double[,] blur = new double[N2, N2]   { { 0.111, 0.111, 0.111},
-                                                                { 0.111, 0.111, 0.111},
-                                                                { 0.111, 0.111, 0.111}};
+        static double m2;
+        public static double[,] blur = new double[N2, N2]   { { m2, m2, m2},
+                                                                { m2, m2, m2},
+                                                                { m2, m2, m2}};
 
         public static UInt32 build (RGB ColorOfPixel)
         {
@@ -39,8 +41,9 @@ namespace WinFormsAppPhotoShop
             Color.B = (float)(coefficent * (pixel & 0x000000FF));
             return Color;
         } 
-        public static UInt32[,] matrix_filtration(int W, int H, UInt32[,] pixel, int N, double[,] matryx )
+        public static UInt32[,] matrix_filtration(int W, int H, UInt32[,] pixel, int N, double[,] matryx, double x )
         {
+            m1 = x;
             int i, j, k, m, gap = (int)(N / 2);
             int tmpH = H + 2 * gap, tmpW = W + 2 * gap;
             UInt32[,] tmppixel = new UInt32[tmpH, tmpW];

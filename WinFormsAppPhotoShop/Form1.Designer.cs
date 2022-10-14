@@ -36,7 +36,6 @@
             this.brightnesscontrastToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.balanceOfColourToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.raiseSharpnessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.blurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -82,8 +81,7 @@
             this.filterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.brightnesscontrastToolStripMenuItem,
             this.balanceOfColourToolStripMenuItem,
-            this.raiseSharpnessToolStripMenuItem,
-            this.blurToolStripMenuItem});
+            this.raiseSharpnessToolStripMenuItem});
             this.filterToolStripMenuItem.Name = "filterToolStripMenuItem";
             this.filterToolStripMenuItem.Size = new System.Drawing.Size(66, 29);
             this.filterToolStripMenuItem.Text = "Filter";
@@ -91,30 +89,23 @@
             // brightnesscontrastToolStripMenuItem
             // 
             this.brightnesscontrastToolStripMenuItem.Name = "brightnesscontrastToolStripMenuItem";
-            this.brightnesscontrastToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.brightnesscontrastToolStripMenuItem.Size = new System.Drawing.Size(272, 34);
             this.brightnesscontrastToolStripMenuItem.Text = "brightness/contrast";
             this.brightnesscontrastToolStripMenuItem.Click += new System.EventHandler(this.brightnesscontrastToolStripMenuItem_Click);
             // 
             // balanceOfColourToolStripMenuItem
             // 
             this.balanceOfColourToolStripMenuItem.Name = "balanceOfColourToolStripMenuItem";
-            this.balanceOfColourToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.balanceOfColourToolStripMenuItem.Size = new System.Drawing.Size(272, 34);
             this.balanceOfColourToolStripMenuItem.Text = "Balance of Colour";
             this.balanceOfColourToolStripMenuItem.Click += new System.EventHandler(this.balanceOfColourToolStripMenuItem_Click);
             // 
             // raiseSharpnessToolStripMenuItem
             // 
             this.raiseSharpnessToolStripMenuItem.Name = "raiseSharpnessToolStripMenuItem";
-            this.raiseSharpnessToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.raiseSharpnessToolStripMenuItem.Text = "raise sharpness";
+            this.raiseSharpnessToolStripMenuItem.Size = new System.Drawing.Size(272, 34);
+            this.raiseSharpnessToolStripMenuItem.Text = "raise sharpness/blur";
             this.raiseSharpnessToolStripMenuItem.Click += new System.EventHandler(this.raiseSharpnessToolStripMenuItem_Click);
-            // 
-            // blurToolStripMenuItem
-            // 
-            this.blurToolStripMenuItem.Name = "blurToolStripMenuItem";
-            this.blurToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.blurToolStripMenuItem.Text = "blur";
-            this.blurToolStripMenuItem.Click += new System.EventHandler(this.blurToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -152,7 +143,6 @@
         private ToolStripMenuItem brightnesscontrastToolStripMenuItem;
         private ToolStripMenuItem balanceOfColourToolStripMenuItem;
         private ToolStripMenuItem raiseSharpnessToolStripMenuItem;
-        private ToolStripMenuItem blurToolStripMenuItem;
         private PictureBox pictureBox1;
     }
 }
